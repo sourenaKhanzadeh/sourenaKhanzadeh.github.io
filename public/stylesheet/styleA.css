@@ -1,0 +1,113 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html, body{
+  height: 100%;
+  width: 100%;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+a::after{
+  content: '';
+  display: block;
+  border-color: inherit;
+  width: 0;
+  transition: all 150ms ease-in-out;
+}
+a:hover::after{
+  content: '';
+  border-bottom: 1px solid #000044;
+  width: 100%;
+}
+.Profile{
+  float: left;
+  text-align: center;
+  height: 100%;
+  width: 200px;
+  background-color: #444444;
+  color: lavender;
+}
+
+.Profile img{
+  display: block;
+  align-self: center;
+  margin: 10px auto;
+  border-radius: 50px;
+  filter: brightness(0.9);
+  -webkit-filter: brightness(0.9);
+  -moz-filter: brightness(0.9);
+
+}
+
+.Profile h2{
+  letter-spacing: 0.25em;
+}
+
+.Profile section{
+  font-size: 15pt;
+  width: 100px;
+  margin: 30px auto;
+  border: 1px solid lavender;
+  padding: 10px;
+}
+
+.Profile p{
+  width: 80%;
+  margin: 10px auto;
+  font-size: 10pt;
+  text-align: left;
+}
+
+
+.main{
+  color: #000044;
+  text-align: center;
+}
+
+.main > h1{
+  text-decoration: underline red dashed;
+}
+
+#about{
+  width: 50%;
+  margin: 15px auto;
+  display: flex;
+  align-self: center;
+  border: 1px solid #000044;
+}
+#about > h2{
+  margin: 10px;
+}
+#about > h2::after{
+  content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+  font-size: 0.5em;
+  float: left;
+}
+.section-1{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.section-1 h2{
+  border: none;
+}
+.section-1 .col{
+  border: 1px solid #000044;
+  height: 25vh;
+  margin-left: 10px;
+}
+
+.section-1 ul{
+  font-size: 1em;
+  list-style-type: circle;
+  list-style-position: inside;
+  margin: 20px auto;
+}
+
+.section-1 li{
+  margin: 10px auto;
+}
