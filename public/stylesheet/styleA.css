@@ -74,7 +74,7 @@ a:hover::after {
   flex-direction: column;
   float: left;
   text-align: center;
-  height: 120vh;
+  height: 121vh;
   width: 200px;
   background-color: #444444;
   color: lavender; }
@@ -197,6 +197,8 @@ a:hover::after {
       border: 1px solid #000044;
       margin-left: 10px;
       text-align: justify; }
+      .main .section-1 .col h3 {
+        margin: 20px 10px; }
       .main .section-1 .col ul {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -207,5 +209,8 @@ a:hover::after {
           list-style: none;
           margin: 10px auto; }
           .main .section-1 .col ul li img {
+            height: 100%;
+            width: 100%; }
+          .main .section-1 .col ul li iframe {
             height: 100%;
             width: 100%; }

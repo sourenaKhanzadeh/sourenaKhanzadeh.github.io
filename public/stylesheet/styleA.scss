@@ -51,7 +51,7 @@
   flex-direction: column;
   float: left;
   text-align: center;
-  height: 120vh;
+  height: 121vh;
   width: 200px;
   background-color: #444444;
   color: lavender;
@@ -140,8 +140,7 @@
 
   /* SECTIONS */
   .section-1{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    @include col-2;
     h2{
       border: none;
     }
@@ -149,6 +148,9 @@
       border: 1px solid #000044;
       margin-left: 10px;
       text-align: justify;
+      h3{
+        margin: 20px 10px;
+      }
       ul{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -162,6 +164,12 @@
             $lw: 100%;
             height: $lw;
             width: $lw;
+          }
+          iframe{
+            $lw: 100%;
+            height: $lw;
+            width: $lw;
+
           }
         }
       }

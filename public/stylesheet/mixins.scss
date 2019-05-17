@@ -20,3 +20,9 @@
   width: $width;
   margin: 10px auto;
 }
+
+
+@mixin col-2(){
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
