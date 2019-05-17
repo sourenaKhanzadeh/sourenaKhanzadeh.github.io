@@ -61,16 +61,22 @@ a:hover::after {
   text-align: center;
   /* ABOUT */
   /* ABOUT ENDS*/
+  /* EDUCATION */
+  /* EDUCATION ENDS*/
+  /* EXPERIENCE */
+  /* EXPERIENCE ENDS*/
   /* SECTIONS */
   /* SECTIONS Ends*/ }
   .main > h1 {
     text-decoration: underline red dashed; }
   .main #about {
-    width: 50%;
-    margin: 15px auto;
     display: flex;
+    flex-direction: column;
+    border: 1px solid #000044;
+    text-align: justify;
     align-self: center;
-    border: 1px solid #000044; }
+    width: 50%;
+    margin: 10px auto; }
     .main #about > h2 {
       margin: 10px; }
       .main #about > h2::after {
@@ -101,6 +107,40 @@ a:hover::after {
         width: 70px;
         height: 70px;
         background-image: url("../img/school_logo/ryerson.jpg");
+        background-position: center;
+        background-size: contain; }
+  .main .experience {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000044;
+    text-align: justify;
+    align-self: center;
+    width: 80%;
+    margin: 10px auto; }
+    .main .experience section {
+      margin: 0 10px; }
+      .main .experience section #triway::before {
+        content: '';
+        display: block;
+        width: 70px;
+        height: 70px;
+        background-image: url("../img/workplace_logo/triway.png");
+        background-position: center;
+        background-size: contain; }
+      .main .experience section #wlc::before {
+        content: '';
+        display: block;
+        width: 70px;
+        height: 70px;
+        background-image: url("../img/workplace_logo/WLC Logo.jpg");
+        background-position: center;
+        background-size: contain; }
+      .main .experience section #mf::before {
+        content: '';
+        display: block;
+        width: 70px;
+        height: 70px;
+        background-image: url("../img/workplace_logo/Logo.png");
         background-position: center;
         background-size: contain; }
   .main .section-1 {

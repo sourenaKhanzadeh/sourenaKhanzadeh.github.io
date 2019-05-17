@@ -10,3 +10,13 @@
     background-size: contain;
   }
 }
+
+@mixin col-1($width){
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000044;
+  text-align: justify;
+  align-self: center;
+  width: $width;
+  margin: 10px auto;
+}

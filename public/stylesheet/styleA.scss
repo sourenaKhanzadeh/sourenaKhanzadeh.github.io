@@ -49,11 +49,7 @@
   }
   /* ABOUT */
   #about{
-    width: 50%;
-    margin: 15px auto;
-    display: flex;
-    align-self: center;
-    border: 1px solid #000044;
+    @include col-1(50%);
     & > h2{
       margin: 10px;
 
@@ -66,14 +62,9 @@
     }
   }
   /* ABOUT ENDS*/
+  /* EDUCATION */
   .education{
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #000044;
-    text-align: justify;
-    align-self: center;
-    width: 80%;
-    margin: 10px auto;
+    @include col-1(80%);
     section{
       margin: 0 10px;
       #toronto{
@@ -85,6 +76,25 @@
     }
 
   }
+  /* EDUCATION ENDS*/
+  /* EXPERIENCE */
+  .experience{
+    @include col-1(80%);
+    section{
+      margin: 0 10px;
+      #triway{
+        @include logo('../img/workplace_logo/triway.png');
+      }
+      #wlc{
+        @include logo('../img/workplace_logo/WLC Logo.jpg');
+      }
+      #mf{
+        @include logo('../img/workplace_logo/Logo.png');
+      }
+    }
+  }
+  /* EXPERIENCE ENDS*/
+
   /* SECTIONS */
   .section-1{
     display: grid;
