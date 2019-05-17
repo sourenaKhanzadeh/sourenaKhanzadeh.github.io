@@ -20,8 +20,9 @@ a::after {
 a:hover::after {
   content: '';
   border-bottom: 1px solid #000044;
-  width: 75%; }
+  width: 100%; }
 
+/* PROFILE */
 .Profile {
   display: flex;
   flex-wrap: wrap-reverse;
@@ -54,12 +55,14 @@ a:hover::after {
     font-size: 10pt;
     text-align: left; }
 
+/* MAIN */
 .main {
   color: #000044;
   text-align: center; }
   .main > h1 {
     text-decoration: underline red dashed; }
 
+/* ABOUT */
 #about {
   width: 50%;
   margin: 15px auto;
@@ -73,6 +76,7 @@ a:hover::after {
       font-size: 0.5em;
       float: left; }
 
+/* SECTIONS */
 .section-1 {
   display: grid;
   grid-template-columns: 1fr 1fr; }
@@ -80,13 +84,17 @@ a:hover::after {
     border: none; }
   .section-1 .col {
     border: 1px solid #000044;
-    height: 25vh;
     margin-left: 10px;
     text-align: justify; }
-  .section-1 ul {
-    font-size: 1em;
-    list-style-type: circle;
-    list-style-position: inside;
-    margin: 20px auto; }
-  .section-1 li {
-    margin: 10px auto; }
+    .section-1 .col ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      font-size: 1em;
+      margin: 20px auto; }
+      .section-1 .col ul li {
+        text-align: center;
+        list-style: none;
+        margin: 10px auto; }
+        .section-1 .col ul li img {
+          height: 100%;
+          width: 100%; }
