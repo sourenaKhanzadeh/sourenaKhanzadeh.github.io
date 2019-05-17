@@ -5,7 +5,9 @@
 html, body {
   height: 100%;
   width: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  color: #000044;
+  scroll-behavior: smooth; }
 
 a {
   text-decoration: none;
@@ -94,6 +96,9 @@ a:hover::after {
     margin: 30px auto;
     border: 1px solid lavender;
     padding: 10px; }
+  .Profile ul {
+    text-align: justify;
+    margin-left: 40px; }
   .Profile p {
     width: 80%;
     margin: 10px auto;
@@ -214,3 +219,61 @@ a:hover::after {
           .main .section-1 .col ul li iframe {
             height: 100%;
             width: 100%; }
+
+/* INDUSTRY */
+.industry {
+  border: 1px solid #000044;
+  padding: 10px; }
+  .industry section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; }
+    .industry section .prog-col::before {
+      content: '';
+      display: block;
+      width: 70px;
+      height: 70px;
+      background-image: url("../img/industry/programming.jpg");
+      background-position: center;
+      background-size: contain; }
+    .industry section .full-col::before {
+      content: '';
+      display: block;
+      width: 70px;
+      height: 70px;
+      background-image: url("../img/industry/web.jpg");
+      background-position: center;
+      background-size: contain; }
+    .industry section .Game-col::before {
+      content: '';
+      display: block;
+      width: 70px;
+      height: 70px;
+      background-image: url("../img/industry/Game.jpg");
+      background-position: center;
+      background-size: contain; }
+    .industry section .Graphic-col::before {
+      content: '';
+      display: block;
+      width: 70px;
+      height: 70px;
+      background-image: url("../img/industry/Graphic.jpg");
+      background-position: center;
+      background-size: contain; }
+    .industry section .Model-col::before {
+      content: '';
+      display: block;
+      width: 70px;
+      height: 70px;
+      background-image: url("../img/industry/model.jpg");
+      background-position: center;
+      background-size: contain; }
+    .industry section .Machine-col::before {
+      content: '';
+      display: block;
+      width: 70px;
+      height: 70px;
+      background-image: url("../img/industry/machine.jpg");
+      background-position: center;
+      background-size: contain; }
+
+/* INDUSTRY ENDS*/

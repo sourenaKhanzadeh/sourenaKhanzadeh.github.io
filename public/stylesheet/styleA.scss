@@ -75,6 +75,12 @@
     border: 1px solid lavender;
     padding: 10px;
   }
+  ul{
+    text-align: justify;
+    margin-left: 40px;
+    li{
+    }
+  }
   p{
     width: 80%;
     margin: 10px auto;
@@ -111,6 +117,7 @@
     section{
       margin: 0 10px;
       #toronto{
+
         @include logo('../img/school_logo/uoft.jpg');
       }
       #ryerson{
@@ -152,8 +159,7 @@
         margin: 20px 10px;
       }
       ul{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        @include col-3;
         font-size: 1em;
         margin: 20px auto;
         li{
@@ -177,3 +183,30 @@
   }
   /* SECTIONS Ends*/
 }
+/* INDUSTRY */
+.industry{
+  border: 1px solid #000044;
+  padding: 10px;
+  section{
+    @include col-3;
+    .prog-col{
+      @include logo('../img/industry/programming.jpg');
+    }
+    .full-col{
+      @include logo('../img/industry/web.jpg');
+    }
+    .Game-col{
+      @include logo('../img/industry/Game.jpg');
+    }
+    .Graphic-col{
+      @include logo('../img/industry/Graphic.jpg');
+    }
+    .Model-col{
+      @include logo('../img/industry/model.jpg');
+    }
+    .Machine-col{
+      @include logo('../img/industry/machine.jpg');
+    }
+  }
+}
+/* INDUSTRY ENDS*/
