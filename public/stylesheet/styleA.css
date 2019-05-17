@@ -4,7 +4,8 @@
 
 html, body {
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  overflow: hidden; }
 
 a {
   text-decoration: none;
@@ -22,6 +23,50 @@ a:hover::after {
   border-bottom: 1px solid #000044;
   width: 100%; }
 
+@keyframes leftTranslate {
+  0% {
+    left: -100%; }
+  100% {
+    left: 0; } }
+
+/* PRELOAD */
+.preload {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 51, 0.9);
+  z-index: 100;
+  animation: leftTranslate 3s; }
+  .preload h1 {
+    color: lavender;
+    width: 50%;
+    margin: 50px auto;
+    font-size: 5em;
+    text-align: center; }
+  .preload button {
+    cursor: pointer;
+    padding: 15px 25px;
+    font-size: 5em;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: lavender;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 20px #2d682f; }
+    .preload button:hover {
+      background-color: #3d8b40; }
+    .preload button:active {
+      background-color: #3e8e41;
+      box-shadow: 0 5px black;
+      transform: translateY(4px); }
+
+/* PRELOAD END*/
 /* PROFILE */
 .Profile {
   display: flex;
@@ -29,7 +74,7 @@ a:hover::after {
   flex-direction: column;
   float: left;
   text-align: center;
-  height: 100%;
+  height: 120vh;
   width: 200px;
   background-color: #444444;
   color: lavender; }
