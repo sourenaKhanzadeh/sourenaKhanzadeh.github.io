@@ -1,0 +1,12 @@
+@mixin logo($url){
+  &::before{
+    content: '';
+    display: block;
+    $lw: 70px;
+    width: $lw;
+    height: $lw;
+    background-image: url($url);
+    background-position: center;
+    background-size: contain;
+  }
+}
