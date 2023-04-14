@@ -23,6 +23,21 @@ const LandingPage = () => {
         await console.log(container);
     }, []);
 
+    const downloadResume = () => {
+        // using Java Script method to get PDF file
+        fetch('res/resumes/resume_v1.pdf').then(response => {
+            response.blob().then(blob => {
+                // Creating new object of PDF file
+                const fileURL = window.URL.createObjectURL(blob);
+                // Setting various property values
+                let alink = document.createElement('a');
+                alink.href = fileURL;
+                alink.download = 'resume.pdf';
+                alink.click();
+            })
+        })
+    }
+
     return (
         <>
             <Particles
@@ -112,7 +127,7 @@ const LandingPage = () => {
                     <h1>Welcome, I am a <span><TypewriterComponent/></span></h1>
                 </div>
                 <Space wrap>
-                    <Button type={"primary"}>Resume <PaperClipOutlined /></Button>
+                    <Button type={"primary"} onClick={downloadResume}>Resume <PaperClipOutlined /></Button>
                     <Link to={"/projects"}>
                         <Button type={"dashed"}>My Projects</Button>
                     </Link>
