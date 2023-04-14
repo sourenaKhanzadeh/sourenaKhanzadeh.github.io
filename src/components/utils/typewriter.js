@@ -10,7 +10,7 @@ const TypewriterComponent = () => {
       typeSpeed={100}
       deleteSpeed={50}
       delaySpeed={1000}
-      words={['Software Engineer', 'Ai Researcher', 'ML Engineer',
+      words={['Software Engineer', 'AI Researcher', 'ML Engineer',
           'Data Scientist', 'Full Stack Developer']}
     />
   );

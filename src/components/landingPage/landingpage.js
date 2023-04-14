@@ -3,6 +3,10 @@ import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import { useCallback } from "react";
 import { Button, Space } from "antd";
+import { Link } from "react-router-dom";
+import { PaperClipOutlined, GithubFilled,
+            LinkedinFilled
+} from "@ant-design/icons";
 import TypewriterComponent from "../utils/typewriter";
 import "../../scss/index.scss";
 
@@ -108,8 +112,18 @@ const LandingPage = () => {
                     <h1>Welcome, I am a <span><TypewriterComponent/></span></h1>
                 </div>
                 <Space wrap>
-                    <Button type={"primary"}>Contact Me</Button>
-                    <Button type={"dashed"}>My Projects</Button>
+                    <Button type={"primary"}>Resume <PaperClipOutlined /></Button>
+                    <Link to={"/projects"}>
+                        <Button type={"dashed"}>My Projects</Button>
+                    </Link>
+                </Space>
+                <Space wrap>
+                    <Link to={"https://github.com/sourenaKhanzadeh"}>
+                        <Button type={"ghost"}><GithubFilled/></Button>
+                    </Link>
+                    <Link to={"https://www.linkedin.com/in/sourenak/"}>
+                        <Button type={"ghost"}><LinkedinFilled/></Button>
+                    </Link>
                 </Space>
             </div>
         </>
