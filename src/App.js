@@ -1,13 +1,19 @@
+import React from "react";
 import logo from './logo.svg';
-import TypewriterComponent from './components/utils/typewriter';
+import LandingPage from "./components/landingPage/landingpage";
 import './App.scss';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 
 function App() {
-  return (
-    <>
-        <h1>Welcome, I am a  <TypewriterComponent/></h1>
-    </>
-  );
+    return (
+        // Router goes here
+        <Router>
+            <Routes>
+                <Route path="/" element={<LandingPage/>}/>
+            </Routes>
+        </Router>
+    );
 }
 
 export default App;
