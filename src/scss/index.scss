@@ -6,8 +6,18 @@ html, body {
 }
 
 .page {
-  background: #fff;
+  background: transparent;
   color: #000;
+  position: relative;
+    z-index: 10;
+  display: flex;
+  flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  Button{
+    margin-top: 50px;
+  }
 }
 
 
@@ -22,7 +32,6 @@ html, body {
     align-items: center;
   background: transparent;
   color: #000;
-    height: 100vh;
   z-index: 10;
 }
 

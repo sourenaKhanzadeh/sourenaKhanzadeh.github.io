@@ -2,6 +2,7 @@ import React from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import { useCallback } from "react";
+import { Button, Space } from "antd";
 import TypewriterComponent from "../utils/typewriter";
 import "../../scss/index.scss";
 
@@ -75,7 +76,7 @@ const LandingPage = () => {
                                 default: "bounce",
                             },
                             random: false,
-                            speed: 3,
+                            speed: 1.5,
                             straight: false,
                         },
                         number: {
@@ -102,11 +103,14 @@ const LandingPage = () => {
                 }}
 
             />
-            <div style={{position: 'relative', zIndex: 10}}>
+            <div className={"page"}>
                 <div className={"landing-page"}>
                     <h1>Welcome, I am a <span><TypewriterComponent/></span></h1>
                 </div>
-                <button className={"btn btn-primary"}>Contact Me</button>
+                <Space wrap>
+                    <Button type={"primary"}>Contact Me</Button>
+                    <Button type={"dashed"}>My Projects</Button>
+                </Space>
             </div>
         </>
         );
