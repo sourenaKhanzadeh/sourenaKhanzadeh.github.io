@@ -1,12 +1,13 @@
 import React from 'react';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
-import { FcGraduationCap } from 'react-icons/fc';
 import 'react-vertical-timeline-component/style.min.css';
+import { FcGraduationCap } from 'react-icons/fc';
 import '../../scss/education.scss';
+import "../../scss/utils.scss";
 
 const Education = () => {
     return (
-        <div className="education">
+        <div className="card education">
             <h1>Education</h1>
             <VerticalTimeline
                 animate={true}
