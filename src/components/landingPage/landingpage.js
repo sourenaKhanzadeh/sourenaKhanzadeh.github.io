@@ -128,8 +128,8 @@ const LandingPage = () => {
                 </div>
                 <Space wrap>
                     <Button type={"primary"} onClick={downloadResume}>Resume <PaperClipOutlined /></Button>
-                    <Link to={"/projects"}>
-                        <Button type={"dashed"}>My Projects</Button>
+                    <Link to={"/explore"}>
+                        <Button type={"dashed"}>Explore</Button>
                     </Link>
                 </Space>
                 <Space wrap>

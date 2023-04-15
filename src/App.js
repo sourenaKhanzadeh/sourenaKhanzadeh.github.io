@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import LandingPage from "./components/landingPage/landingpage";
 import './App.scss';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import Explore from "./components/explore/explore";
 
 function App() {
     return (
@@ -11,6 +11,7 @@ function App() {
         <Router>
             <Routes>
                 <Route path="/" element={<LandingPage/>}/>
+                <Route path="/explore" element={<Explore/>}/>
             </Routes>
         </Router>
     );
