@@ -9,10 +9,10 @@ const Explore = () => {
 
     return (
         <>
-            <motion.div  className="progress-bar"
-                         style={{scaleX: scrollYProgress}}/>
             <Education/>
             <Experience/>
+            <motion.div  className="progress-bar"
+                         style={{scaleX: scrollYProgress}}/>
         </>
     );
 }

@@ -34,7 +34,7 @@ const Education = () => {
                     // contentStyle={{ background: '#dc6565', color: '#fff' }}
                     contentArrowStyle={{ borderRight: '7px solid  #dc6565' }}
                     date="2018 - 2022"
-                    // iconStyle={{ background: '#dc6565', color: '#fff' }}
+                    iconStyle={{ background: '#dc6565', color: '#fff' }}
                     icon={<FcGraduationCap/>}
                 >
                     <h3 className="vertical-timeline-element-title">Toronto Metropolitan University</h3>
