@@ -3,6 +3,7 @@ import {motion, useScroll} from "framer-motion";
 import "../../scss/explore.scss"
 import Education from "../education/education";
 import Experience from "../experience/experience";
+import Projects from "../projects/projects";
 
 const Explore = () => {
     const { scrollYProgress } = useScroll();
@@ -11,6 +12,7 @@ const Explore = () => {
         <>
             <Education/>
             <Experience/>
+            <Projects/>
             <motion.div  className="progress-bar"
                          style={{scaleX: scrollYProgress}}/>
         </>
