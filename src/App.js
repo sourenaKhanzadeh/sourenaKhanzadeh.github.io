@@ -1,5 +1,4 @@
 import React from "react";
-import logo from './logo.svg';
 import LandingPage from "./components/landingPage/landingpage";
 import './App.scss';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
