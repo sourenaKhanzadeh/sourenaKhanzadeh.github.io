@@ -133,6 +133,9 @@ const LandingPage = () => {
 
             />
             <div className={"page"}>
+                <div  className={"profile-image"} style={isDarkMode === true? {border:"2px solid white"}: {border:"2px solid black"}}>
+                    <img src={"res/imgs/picofme.png"} alt={"profile"}/>
+                </div>
                 <div className={"landing-page"}>
                     <h1 style={isDarkMode === true? {color:"white"}: {color:"black"}}>Welcome, I am a <span><TypewriterComponent/></span></h1>
                 </div>
