@@ -1,5 +1,5 @@
-import React from "react";
-import Particles from "react-tsparticles";
+import React, { useState } from "react";
+import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import { useCallback } from "react";
 import { Button, Space } from "antd";
@@ -7,8 +7,11 @@ import { Link } from "react-router-dom";
 import { PaperClipOutlined, GithubFilled,
             LinkedinFilled
 } from "@ant-design/icons";
+import { CgDarkMode } from "react-icons/cg";
 import TypewriterComponent from "../utils/typewriter";
 import "../../scss/index.scss";
+
+
 
 const LandingPage = () => {
     const particlesInit = useCallback(async engine => {
@@ -24,7 +27,7 @@ const LandingPage = () => {
     }, []);
 
     const downloadResume = () => {
-        // using Java Script method to get PDF file
+        // using JavaScript method to get PDF file
         fetch('res/resumes/resume_v1.pdf').then(response => {
             response.blob().then(blob => {
                 // Creating new object of PDF file
@@ -38,20 +41,27 @@ const LandingPage = () => {
         })
     }
 
+    const [isDarkMode, setIsDarkMode] = useState(false);
+    if (isDarkMode === true) {
+        document.body.style.backgroundColor = "black";
+    }else{
+        document.body.style.backgroundColor = "white";
+    }
+
     return (
         <>
             <Particles
                 id="tsparticles"
                 init={particlesInit}
                 loaded={particlesLoaded}
-                style={{position: 'absolute', top: 0, left: 0, zIndex: -1, width: '100px'}}
+                style={isDarkMode === true ? {backgroundColor:"black"}: {backgroundColor:"white"}}
                 options={{
-                    background: {
-                        color: {
-                            value: "#ffffff00",
-                        }
-                    },
-                    fpsLimit: 120,
+                    // background: {
+                    //     color: {
+                    //         value: "#ffffff",
+                    //     }
+                    // },
+                    fpsLimit: 60,
                     interactivity: {
                         events: {
                             onClick: {
@@ -69,7 +79,7 @@ const LandingPage = () => {
                                 quantity: 4,
                             },
                             repulse: {
-                                distance: 200,
+                                distance: 100,
                                 duration: 0.4,
                             },
                         },
@@ -124,7 +134,7 @@ const LandingPage = () => {
             />
             <div className={"page"}>
                 <div className={"landing-page"}>
-                    <h1>Welcome, I am a <span><TypewriterComponent/></span></h1>
+                    <h1 style={isDarkMode === true? {color:"white"}: {color:"black"}}>Welcome, I am a <span><TypewriterComponent/></span></h1>
                 </div>
                 <Space wrap>
                     <Button type={"primary"} onClick={downloadResume}>Resume <PaperClipOutlined /></Button>
@@ -134,12 +144,19 @@ const LandingPage = () => {
                 </Space>
                 <Space wrap>
                     <Link to={"https://github.com/sourenaKhanzadeh"}>
-                        <Button type={"ghost"}><GithubFilled/></Button>
+                        <Button style={isDarkMode === true? {color:"white"}: {color:"black"}} type={"ghost"}><GithubFilled/></Button>
                     </Link>
                     <Link to={"https://www.linkedin.com/in/sourenak/"}>
-                        <Button type={"ghost"}><LinkedinFilled/></Button>
+                        <Button style={isDarkMode === true? {color:"white"}: {color:"black"}} type={"ghost"}><LinkedinFilled/></Button>
                     </Link>
                 </Space>
+            </div>
+            <div className={"dark-mode"} style={{position:"absolute",
+                top:0, right:0, zIndex:10}}>
+                <Button style={isDarkMode === true? {color:"white"}: {color:"black"}} type={"ghost"}
+                onClick={()=>{
+                    setIsDarkMode(!isDarkMode);
+                }}><CgDarkMode/></Button>
             </div>
         </>
         );
